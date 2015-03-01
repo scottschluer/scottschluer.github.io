@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: Creating a RouteData instance from a URL
 ---
 
 This post is a temporary placeholder for the real blog post on how to get a RouteData instance from an arbitrary URL. This post got a lot of traffic from StackOverflow and I’m in the process of changing my website around (a lot). I’m just putting the relevant code here for the benefit of folks who are coming from SO and will re-write this post shortly to contain a full description of the implementation.
@@ -14,7 +14,7 @@ public class RouteInfo
     {  
         RouteData = data;  
     }  
-  
+    
     public RouteInfo(Uri uri, string applicationPath)  
     {  
         RouteData = RouteTable.Routes.GetRouteData(new InternalHttpContext(uri, applicationPath));  
@@ -53,6 +53,3 @@ public class RouteInfo
 }  
 {% endhighlight %}
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
